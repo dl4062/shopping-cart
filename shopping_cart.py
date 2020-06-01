@@ -52,7 +52,7 @@ choices = []
 filling_cart = input("Please input a product identifier: ")
 while filling_cart != "DONE":
     if filling_cart in possible_choices:
-        choices.append(filling_cart)
+        choices.append(int(filling_cart))
     else:
         print("Please enter a valid product identifier")
     filling_cart = input("Please input a product identifier: ")
