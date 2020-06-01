@@ -40,7 +40,7 @@ def to_usd(my_price):
 #print(products)
 
 #GUIDED CHECKPOINT PART 1
-
+'''
 possible_choices = []
 for ids in products:
     possible_choices.append(str(ids["id"]))
@@ -59,3 +59,14 @@ while filling_cart != "DONE":
     
 
 print(choices)
+'''
+
+# GUIDED CHECKPOINT STEP 2
+
+choices = [1, 8, 6, 16, 6] # temporary list of valid ids for testing purposes
+
+print("SHOPPING CART ITEM IDENTIFIERS INCLUDE:", choices)
+
+for your_choices in choices:
+    matching_choices = [c for c in products if str(c["id"]) == str(your_choices)]
+    print(matching_choices)
