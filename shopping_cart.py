@@ -68,8 +68,9 @@ choices = [1, 8, 6, 16, 6] # temporary list of valid ids for testing purposes
 #print("SHOPPING CART ITEM IDENTIFIERS INCLUDE:", choices)
 print("SELECTED PRODUCTS:")
 
-for your_choices in choices:
-    matching_choices = [c for c in products if str(c["id"]) == str(your_choices)]
-    
-for i in matching_choices:
-    print("...", i['name'], to_usd(i["price"]))  
+for choice in choices:
+    matching_choices = [c for c in products if str(c["id"]) == str(choice)]   
+    for i in matching_choices:
+        print("...", i['name'], to_usd(i["price"]))
+
+
