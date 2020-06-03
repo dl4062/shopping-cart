@@ -1,4 +1,7 @@
 # shopping_cart.py
+import datetime
+
+now = datetime.datetime.now()
 
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -40,7 +43,7 @@ def to_usd(my_price):
 #print(products)
 
 #GUIDED CHECKPOINT PART 1
-'''
+
 possible_choices = []
 for ids in products:
     possible_choices.append(str(ids["id"]))
@@ -57,13 +60,15 @@ while filling_cart != "DONE":
         print("Please enter a valid product identifier")
     filling_cart = input("Please input a product identifier: ")
     
-
-print(choices)
-'''
-
+print("------------------------------")
+print("DAVE'S FOODS AND STUFF")
+print("WWW.HUNGRY-DAVE.COM")
+print("------------------------------")
+print("CHECKOUT AT: ", now.strftime("%Y-%m-%d %H:%M %p"))
+print("------------------------------")
 # GUIDED CHECKPOINT STEP 2
 
-choices = [1, 8, 6, 16, 6] # temporary list of valid ids for testing purposes
+#choices = [1, 8, 6, 16, 6] # temporary list of valid ids for testing purposes
 
 #print("SHOPPING CART ITEM IDENTIFIERS INCLUDE:", choices)
 print("SELECTED PRODUCTS:")
@@ -76,6 +81,11 @@ for choice in choices:  #do not mess with this section of the code
     for i in matching_choices:
         print("...", i['name'], "(" + to_usd(i["price"]) + ")")
         total_price = total_price + i["price"]
-
-print("THE TOTAL PRICE IS", to_usd(total_price))
-
+print("------------------------------")
+print("SUBTOTAL:", to_usd(total_price))
+tax = total_price*.08875
+print("TAX:", to_usd(tax))
+print("TOTAL:", to_usd(tax+total_price))
+print("------------------------------")
+print("THANKS, SEE YOU AGAIN SOON")
+print("------------------------------")
